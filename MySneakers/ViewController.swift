@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupTextField()
     }
     
     @IBAction func segmentedChanged(_ sender: UISegmentedControl) {
@@ -41,3 +41,14 @@ class ViewController: UIViewController {
     
 }
 
+extension ViewController: UITextFieldDelegate {
+    
+    func setupTextField() {
+        nameTF.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
