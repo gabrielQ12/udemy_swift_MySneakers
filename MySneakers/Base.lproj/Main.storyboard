@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sfj-co-ZQD">
-                                <rect key="frame" x="5" y="64" width="383" height="550"/>
+                                <rect key="frame" x="5" y="64" width="383" height="529.66666666666663"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Sneakers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvA-SS-UN5">
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="45.666666666666664"/>
@@ -33,12 +33,12 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jdl-2w-MB0">
                                         <rect key="frame" x="0.0" y="95.666666666666657" width="383" height="32"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
-                                            <segment title=""/>
+                                            <segment title="Ville"/>
+                                            <segment title="Running"/>
+                                            <segment title="Bascket"/>
                                         </segments>
                                         <connections>
-                                            <action selector="segmentedChqnged:" destination="BYZ-38-t0r" eventType="valueChanged" id="P4U-pM-1NQ"/>
+                                            <action selector="segmentedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="SNm-bR-bGG"/>
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="92" translatesAutoresizingMaskIntoConstraints="NO" id="oPe-pX-kt4">
@@ -67,7 +67,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="SuP-HJ-Qr2" userLabel="Size Stepper">
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="42" minimumValue="36" maximumValue="46" stepValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="SuP-HJ-Qr2" userLabel="Size Stepper">
                                                 <rect key="frame" x="289" y="0.0" width="94" height="32"/>
                                                 <connections>
                                                     <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Jvt-mG-vdG"/>
@@ -87,8 +87,8 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="hdy-09-rDH"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-93-Cx7">
-                                        <rect key="frame" x="0.0" y="529.66666666666663" width="383" height="20.333333333333371"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMA-93-Cx7">
+                                        <rect key="frame" x="0.0" y="529.66666666666663" width="383" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -107,17 +107,19 @@
                     </view>
                     <connections>
                         <outlet property="colorPicker" destination="2uT-bg-0yS" id="S2u-Yp-B8x"/>
+                        <outlet property="genderLabel" destination="BaM-UO-FSc" id="x6i-Gt-w7O"/>
                         <outlet property="genderSwitch" destination="deQ-d9-tE9" id="fum-Vy-HWw"/>
                         <outlet property="nameTF" destination="pbi-8D-gtu" id="3S6-SA-uGf"/>
                         <outlet property="resultIV" destination="lba-RT-e6i" id="l4W-2G-ct0"/>
                         <outlet property="resultLabel" destination="dMA-93-Cx7" id="ELL-vr-nfL"/>
+                        <outlet property="sizeLabel" destination="JCX-uK-3nq" id="tPc-wr-sHJ"/>
                         <outlet property="sizeStepper" destination="SuP-HJ-Qr2" id="aFV-eW-SL8"/>
                         <outlet property="typeSegmented" destination="Jdl-2w-MB0" id="zJS-FO-0MS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="5"/>
+            <point key="canvasLocation" x="-527" y="1"/>
         </scene>
     </scenes>
     <resources>
